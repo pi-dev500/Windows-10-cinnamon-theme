@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=Win10
+Description=A theme that mimics Windows 10 boot splash.
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/win10
+ScriptFile=/usr/share/plymouth/themes/win10/win10.script

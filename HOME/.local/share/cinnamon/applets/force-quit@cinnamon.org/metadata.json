@@ -1,0 +1,7 @@
+{
+    "uuid": "menu@pi-dev500",
+    "name": "Windows10-menu",
+    "description": "Click on the applet to launch start menu",
+    "icon": "start-here-sybolic",
+    "max-instances": "-1"
+}

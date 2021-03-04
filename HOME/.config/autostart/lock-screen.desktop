@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Exec=cinnamon-screensaver-command -a
+X-GNOME-Autostart-enabled=true
+NoDisplay=false
+Hidden=false
+Name[fr_FR]=lock-screen
+Comment[fr_FR]=lock screen on startup
+X-GNOME-Autostart-Delay=0

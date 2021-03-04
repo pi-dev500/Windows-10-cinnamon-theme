@@ -1,0 +1,4 @@
+[Desktop Entry]
+Type=Application
+Name=Windows-10
+Exec=if [ ! -f /tmp/cinnamon ];then cinnamon-launcher; killall lxpanel; touch /tmp/cinnamon; fi
