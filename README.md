@@ -1,6 +1,6 @@
 # Windows-10-cinnamon-theme
 
-Install by executing the install script. No uninstall script for the moment.
+Install by executing the install script.**uninstall script is coming!**
 
 Normaly works on all debian-baseds distros.
 
