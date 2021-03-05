@@ -1,8 +1,32 @@
 #!/bin/bash
 DIR="$(cd "$(dirname $0)" && pwd)"
-if [ ! -f /usr/bin/cinnamon ];then
+if [ -f $DIR/backup/gsettings ];then
+	printf "Theme is aldready installed, exiting now."
+	exit 0
+fi
+if [ -f /usr/bin/cinnamon ];then
+	echo creating backup...
+	echo -n false >$DIR/backup/uninstallcinnamon
+	cp -r ~/.local/share/cinnamon/ $DIR/backup/.local/share/
+	cp -r ~/.cinnamon/ $DIR/backup/
+	cp -r ~/.icons $DIR/backup
+	printf "set org.cinnamon.desktop.interface gtk-theme ">$DIR/backup/gsettings
+	gsettings get org.cinnamon.desktop.interface gtk-theme>>$DIR/backup/gsettings
+	printf "set org.cinnamon.theme name ">>$DIR/backup/gsettings
+	gsettings get org.cinnamon.theme name>>$DIR/backup/gsettings
+	printf "set org.cinnamon.desktop.wm.preferences theme ">>$DIR/backup/gsettings
+	gsettings get org.cinnamon.desktop.wm.preferences theme>>$DIR/backup/gsettings
+	printf "set org.cinnamon.desktop.interface icon-theme ">>$DIR/backup/gsettings
+	gsettings get org.cinnamon.desktop.interface icon-theme>>$DIR/backup/gsettings
+	printf "set org.cinnamon.desktop.background picture-uri ">>$DIR/backup/gsettings
+	gsettings get org.cinnamon.desktop.background picture-uri >>$DIR/backup/gsettings
+	printf "set org.cinnamon.desktop.interface cursor-theme ">>$DIR/backup/gsettings
+	gsettings get org.cinnamon.desktop.interface cursor-theme>>$DIR/backup/gsettings
+else
 	echo installing cinnamon...
+	sudo apt update
 	sudo apt install cinnamon -y
+	echo -n true >$DIR/backup/uninstallcinnamon
 fi
 mkdir -p ~/.local/share/backgrounds
 echo $HOME/.local/share/backgrounds >~/.cinnamon/backgrounds/user-folders.lst

@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Application
 Icon=system-file-manager
-Name=File Manager PCManFM
+Name=File Manager
 Name[ar]=مدير الملفات PCManFM
 Name[be]=Файлавы менеджар PCManFM
 Name[bg]=Файлов мениджър PCManFM
@@ -10,13 +10,13 @@ Name[cs]=Správce souborů PCManFM
 Name[da]=Filhåndteringen PCManFM
 Name[de]=PCManFM Dateimanager
 Name[el]=Διαχειριστής Αρχείων PCManFM
-Name[en_GB]=File Manager PCManFM
+Name[en_GB]=File Manager
 Name[es]=Gestor de archivos PCManFM
-Name[et]=Failihaldur PCManFM
+Name[et]=Failihaldur
 Name[eu]=PCManFM fitxategi-kudeatzailea
-Name[fa]=مدیر پرونده PCManFM
+Name[fa]=مدیر پرونده 
 Name[fi]=Tiedostonhallinta
-Name[fr]=Gestionnaire de fichiers PCManFM
+Name[fr]=Gestionnaire de fichiers
 Name[gl]=Xestor de ficheiros PCManFM
 Name[he]=מנהל הקבצים PCManFM
 Name[hr]=Upravitelj datotekama PCManFM
