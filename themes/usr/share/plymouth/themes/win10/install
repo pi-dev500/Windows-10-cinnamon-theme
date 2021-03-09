@@ -1,0 +1,13 @@
+#!/bin/bash
+DIR="$(cd "$(dirname $0)" && pwd)"
+if [ ! -f /usr/bin/cinnamon ];then
+	echo installing cinnamon...
+	sudo apt install cinnamon -y
+fi
+mkdir -p ~/.local/share/backgrounds
+echo $HOME/.local/share/backgrounds >~/.cinnamon/backgrounds/user-folders.lst
+cp -r $DIR/HOME/.cinnamon/ ~/
+cp -r $DIR/HOME/.local/ ~/
+sudo cp -r $DIR/themes/* /
+echo configuring splashscreen...
+sudo chmod +x /usr/share/plymouth/themes/win10/install-as-root.sh && sudo bash /usr/share/plymouth/themes/win10/install-as-root.sh
