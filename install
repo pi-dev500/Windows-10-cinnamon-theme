@@ -1,14 +1,14 @@
 #!/bin/bash
 DIR="$(cd "$(dirname $0)" && pwd)"
-if [ -f $DIR/backup/gsettings ];then
+if [ -d $DIR/backup/.cinnamon ];then
 	printf "Theme is aldready installed, exiting now."
 	exit 0
 fi
 if [ -f /usr/bin/cinnamon ];then
 	echo creating backup...
 	echo -n false >$DIR/backup/uninstallcinnamon
-	cp -r ~/.local/share/cinnamon/ $DIR/backup/.local/share/
-	cp -r ~/.cinnamon/ $DIR/backup/
+	mv ~/.local/share/cinnamon/ $DIR/backup/.local/share/
+	mv ~/.cinnamon/ $DIR/backup/
 	cp -r ~/.icons $DIR/backup
 	printf "set org.cinnamon.desktop.interface gtk-theme ">$DIR/backup/gsettings
 	gsettings get org.cinnamon.desktop.interface gtk-theme>>$DIR/backup/gsettings
@@ -29,11 +29,12 @@ else
 	echo -n true >$DIR/backup/uninstallcinnamon
 fi
 mkdir -p ~/.local/share/backgrounds
-echo $HOME/.local/share/backgrounds >~/.cinnamon/backgrounds/user-folders.lst
+
 cp -r $DIR/HOME/.cinnamon/ ~/
 cp -r $DIR/HOME/.local/ ~/
 cp -r $DIR/HOME/.config/ ~/
 cp -r $DIR/HOME/.icons/ ~/
+echo $HOME/.local/share/backgrounds >~/.cinnamon/backgrounds/user-folders.lst
 sudo cp -r $DIR/themes/. /.
 echo configuring splashscreen...
 sudo chmod +x /usr/share/plymouth/themes/win10/install-as-root.sh && sudo bash /usr/share/plymouth/themes/win10/install-as-root.sh
@@ -41,14 +42,14 @@ echo setting cinnamon ...
 gsettings set org.cinnamon.desktop.interface gtk-theme Windows-10
 gsettings set org.cinnamon.theme name Windows-10
 gsettings set org.cinnamon.desktop.wm.preferences theme Windows-10
-gsettings set org.cinnamon.desktop.interface icon-theme Windows-10-icons
+gsettings set org.cinnamon.desktop.interface icon-theme Windows-10
 gsettings set org.cinnamon.desktop.background picture-uri  'file:///'"$HOME/.local/share/backgrounds/Windows10.jpg"
 cd $DIR/cursor
-sudo cp -rf Win-8.1-NS/ /usr/share/icons/Win-10 && sudo update-alternatives --install /usr/share/icons/default/index.theme x-cursor-theme /usr/share/icons/Win-8.1-NS/cursor.theme 90 && sudo update-alternatives --set x-cursor-theme /usr/share/icons/Win-8.1-NS/cursor.theme
+sudo cp -rf Win-8.1-NS/ /usr/share/icons/Win-10 && sudo update-alternatives --install /usr/share/icons/default/index.theme x-cursor-theme /usr/share/icons/Win-10/cursor.theme 90 && sudo update-alternatives --set x-cursor-theme /usr/share/icons/Win-10/cursor.theme
 cp /usr/share/icons/default/index.theme ~/.icons/default/
 gsettings set org.cinnamon.desktop.interface cursor-theme Win-10
 echo "[Desktop Entry]
 Type=Application
 Name=Windows-10
-Exec=$HOME/.cinnamon/startup"
-echo Close this window and reboot to see your new Windows 10 look "!"
+Exec=$HOME/.cinnamon/startup" >~/.config/autostart/win10.desktop
+bash -c "cinnamon-launcher &>/dev/null &"
