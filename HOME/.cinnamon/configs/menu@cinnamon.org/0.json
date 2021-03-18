@@ -83,7 +83,7 @@
         "default_icon": "cinnamon-symbolic",
         "dependency": "menu-custom",
         "indent": true,
-        "value": "gnome-foot"
+        "value": "/home/ursin/.local/share/icons/gnome-foot-symbolic.svg"
     },
     "menu-label": {
         "type": "entry",

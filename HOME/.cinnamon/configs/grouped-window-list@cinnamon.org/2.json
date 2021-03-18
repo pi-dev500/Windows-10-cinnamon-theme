@@ -165,7 +165,7 @@
         "value": [
             "nemo.desktop",
             "microsoft-edge-dev.desktop",
-            "snap-store_snap-store.desktop"
+            "io.snapcraft.Store.desktop"
         ]
     },
     "group-apps": {

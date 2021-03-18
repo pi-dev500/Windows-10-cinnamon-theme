@@ -1,0 +1,11 @@
+#!/bin/bash
+cd $(dirname $0)
+function set {
+	echo setting $1 $2 to '"'$(for i in $3 $4 $5 $6 $7 $8;do echo $i;done)'"'
+	gsettings set $1 $2 "$(for i in $3 $4 $5 $6 $7 $8;do echo $i;done)"
+
+}
+cat $1 | while read ligne ;do 
+	set ${ligne}
+done 
+exit 0
