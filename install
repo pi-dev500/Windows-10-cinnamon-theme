@@ -26,15 +26,18 @@ cp -r $DIR/HOME/.config/ ~/
 cp -r $DIR/HOME/.icons/ ~/
 echo $HOME/.local/share/backgrounds >~/.cinnamon/backgrounds/user-folders.lst
 if [ "$(uname -m)" == "x86_64" ];then
-	echo Installing Microsoft Edge
-	## Setup
-	curl https://packages.microsoft.com/keys/microsoft.asc 2>&1 >/dev/null | gpg --dearmor > microsoft.gpg
-	sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/ 2>&1 >/dev/null
-	sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main" > /etc/apt/sources.list.d/microsoft-edge-dev.list'
-	sudo rm microsoft.gpg
-	## Install
-	sudo apt update 2>&1 >/dev/null
-	sudo apt install microsoft-edge-dev
+	if [ ! -f /usr/bin/microsoft-edge-dev ];then
+		echo true >"$DIR/backup/uninstmicrosoft-edge"
+		echo Installing Microsoft Edge
+		## Setup
+		wget https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add
+		sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/ 2>&1 >/dev/null
+		sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main" > /etc/apt/sources.list.d/microsoft-edge-dev.list'
+		sudo rm microsoft.gpg
+		## Install
+		sudo apt update 2>$DIR/errors | while read line;do printf "\r" ; printf "$line                                         " ;done; printf "\r"; cat $DIR/errors
+		sudo apt install microsoft-edge-dev2>$DIR/errors | while read line;do printf "\r" ; printf "$line                                         " ;done; printf "\r"; cat $DIR/errors
+	fi
 else
 	echo "[Desktop Entry]
 Version=1.0
@@ -164,4 +167,5 @@ echo "[Desktop Entry]
 Type=Application
 Name=Windows-10
 Exec=$HOME/.cinnamon/startup" >~/.config/autostart/win10.desktop
+chmod +x $HOME/.cinnamon/startup
 bash -c "cinnamon-launcher &>/dev/null &"

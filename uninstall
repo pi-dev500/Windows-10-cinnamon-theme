@@ -1,0 +1,36 @@
+#!/bin/bash
+
+DIR="$(readlink -f "$(dirname "$0")")"
+if [ ! -f "$DIR/backup/uninstallcinnamon" ];then
+	echo -e "$(tput setaf 1)Cannot find backup! \nTheme is probably not installed.$(tput sgr0)"
+	echo exiting... && exit 1
+fi
+if cat "$DIR/backup/uninstmicrosoft-edge" | grep true >/dev/null;then
+	echo "Do you want to uninstall Microsoft Edge ?[O/n]"
+	read response
+	if echo response | grep n>/dev/null;then 
+		echo -e "$(tput setaf 2)Nothing to do for the  instant! $(tput sgr0)"
+	else
+		sudo apt purge -y microsoft-edge-dev 2>$DIR/errors | while read line;do printf "\r" ; printf "$line                                                                         " ;done; printf "\r"; cat $DIR/errors
+	fi
+fi
+if cat "$DIR/backup/uninstallcinnamon" | grep true >/dev/null;then
+	echo "Do you want to uninstall cinnamon ?[O/n]"
+	read response
+	if echo response | grep n>/dev/null;then 
+		echo -e "$(tput setaf 2)Nothing to do for the  instant! $(tput sgr0)"
+	else
+		echo uninstalling cinnamon...
+		sudo apt purge cinnamon -y 2>$DIR/errors | while read line;do printf "\r" ; printf "$line                                             " ;done; printf "\r"; cat $DIR/errors
+		sudo apt autoremove --purge -y 2>$DIR/errors | while read line;do printf "\r" ; printf "$line                                         " ;done; printf "\r"; cat $DIR/errors
+	fi
+else
+	"$DIR/reconfigure" "$DIR/backup/gsettings"
+	rm -rf ~/.cinnamon ~/.local/share/cinnamon
+	mv "$DIR/backup/.cinnamon" $HOME
+	mv "$DIR/backup/.icons" $HOME
+	mv "$DIR/backup/.local/share/cinnamon" ~/.local/share/
+fi
+rm ~/.config/autostart/win10.desktop
+echo rebooting...
+reboot
