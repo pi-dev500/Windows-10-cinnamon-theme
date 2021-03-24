@@ -1,20 +1,20 @@
 org.cinnamon.desktop.screensaver allow-keyboard-shortcuts true
 org.cinnamon.desktop.screensaver use-custom-format false
-org.cinnamon.desktop.screensaver date-format '%A %B %e'
+org.cinnamon.desktop.screensaver date-format '%A\n%B\n%e'
 org.cinnamon.desktop.screensaver show-info-panel true
 org.cinnamon.desktop.screensaver screensaver-webkit-theme ''
 org.cinnamon.desktop.screensaver embedded-keyboard-command ''
-org.cinnamon.desktop.screensaver font-time 'Ubuntu 64'
+org.cinnamon.desktop.screensaver font-time 'Ubuntu\n64'
 org.cinnamon.desktop.screensaver allow-media-control true
 org.cinnamon.desktop.screensaver embedded-keyboard-enabled false
 org.cinnamon.desktop.screensaver default-message ''
-org.cinnamon.desktop.screensaver font-date 'Ubuntu 24'
+org.cinnamon.desktop.screensaver font-date 'Ubuntu\n24'
 org.cinnamon.desktop.screensaver show-notifications false
 org.cinnamon.desktop.screensaver show-clock true
 org.cinnamon.desktop.screensaver screensaver-name ''
 org.cinnamon.desktop.screensaver idle-activation-enabled true
 org.cinnamon.desktop.screensaver layout-group -1
-org.cinnamon.desktop.screensaver font-message 'Ubuntu 14'
+org.cinnamon.desktop.screensaver font-message 'Ubuntu\n14'
 org.cinnamon.desktop.screensaver lock-enabled true
 org.cinnamon.desktop.screensaver user-switch-enabled true
 org.cinnamon.desktop.screensaver show-album-art true
@@ -110,7 +110,7 @@ org.cinnamon.muffin background-transition 'blend'
 org.cinnamon.recorder file-extension 'webm'
 org.cinnamon.recorder framerate 15
 org.cinnamon.recorder pipeline ''
-org.cinnamon.desktop.interface gtk-color-palette 'black:white:gray50:red:purple:blue:light blue:green:yellow:orange:lavender:brown:goldenrod4:dodger blue:pink:light green:gray10:gray30:gray75:gray90'
+org.cinnamon.desktop.interface gtk-color-palette 'black:white:gray50:red:purple:blue:light\nblue:green:yellow:orange:lavender:brown:goldenrod4:dodger\nblue:pink:light\ngreen:gray10:gray30:gray75:gray90'
 org.cinnamon.desktop.interface toolkit-accessibility false
 org.cinnamon.desktop.interface can-change-accels false
 org.cinnamon.desktop.interface gtk-theme-backup 'Adwaita'
@@ -149,7 +149,7 @@ org.cinnamon.desktop.interface gtk-im-status-style 'callback'
 org.cinnamon.desktop.interface menubar-accel 'F10'
 org.cinnamon.desktop.interface clock-use-24h true
 org.cinnamon.desktop.interface enable-animations true
-org.cinnamon.desktop.interface font-name 'Liberation Serif 11'
+org.cinnamon.desktop.interface font-name 'Liberation\nSerif\n11'
 org.cinnamon.desktop.interface text-scaling-factor 1.0
 org.cinnamon.desktop.interface menubar-detachable false
 org.cinnamon.desktop.session settings-daemon-uses-logind true
@@ -177,7 +177,7 @@ org.cinnamon.desktop.a11y.mouse click-type-window-visible true
 org.cinnamon.desktop.a11y.mouse dwell-click-enabled false
 org.cinnamon.desktop.a11y.mouse dwell-time 1.2
 org.cinnamon.desktop.a11y.mouse secondary-click-time 1.2
-org.cinnamon.desktop.default-applications.office.calendar exec 'evolution -c calendar'
+org.cinnamon.desktop.default-applications.office.calendar exec 'evolution\n-c\ncalendar'
 org.cinnamon.desktop.default-applications.office.calendar needs-term false
 org.cinnamon.settings-daemon.peripherals.mouse locate-pointer false
 org.cinnamon.settings-daemon.peripherals.mouse custom-threshold false
@@ -316,7 +316,7 @@ org.cinnamon.desktop.wm.preferences action-scroll-titlebar 'none'
 org.cinnamon.desktop.wm.preferences theme 'Windows-10'
 org.cinnamon.desktop.wm.preferences focus-new-windows 'smart'
 org.cinnamon.desktop.wm.preferences disable-workarounds false
-org.cinnamon.desktop.wm.preferences num-workspaces 4
+org.cinnamon.desktop.wm.preferences num-workspaces 2
 org.cinnamon.desktop.wm.preferences theme-backup 'Adwaita'
 org.cinnamon.desktop.wm.preferences application-based false
 org.cinnamon.desktop.wm.preferences raise-on-click true
@@ -329,7 +329,7 @@ org.cinnamon.desktop.wm.preferences action-double-click-titlebar 'toggle-maximiz
 org.cinnamon.desktop.wm.preferences workspace-names @as []
 org.cinnamon.desktop.wm.preferences action-right-click-titlebar 'menu'
 org.cinnamon.desktop.wm.preferences visual-bell-type 'fullscreen-flash'
-org.cinnamon.desktop.wm.preferences titlebar-font 'Serif 12'
+org.cinnamon.desktop.wm.preferences titlebar-font 'Serif\n12'
 org.cinnamon.desktop.wm.preferences focus-mode 'click'
 org.cinnamon.desktop.wm.preferences titlebar-uses-system-font false
 org.cinnamon.desktop.wm.preferences mouse-button-zoom-modifier '<Alt>'
@@ -337,7 +337,6 @@ org.cinnamon.desktop.wm.preferences button-layout ':minimize,maximize,close'
 org.cinnamon.desktop.wm.preferences auto-raise-delay 500
 org.cinnamon.desktop.wm.preferences audible-bell false
 org.cinnamon.desktop.wm.preferences visual-bell false
-org.gnome.gedit.plugins.filebrowser virtual-root 'file:///home/ursin/Documents/GitHub/Windows-10-cinnamon-theme/themes/usr/share/cinnamon/applets/menu@cinnamon.org'
 org.cinnamon.desktop.keybindings custom-list @as []
 org.cinnamon.desktop.keybindings looking-glass-keybinding ['<Super>l']
 org.cinnamon.desktop.keybindings magnifier-zoom-in ['<Alt><Super>equal']
@@ -504,7 +503,7 @@ org.cinnamon.desktop.lockdown disable-save-to-disk false
 org.cinnamon.theme gtk-version-scrollbar-multiplier 1.5
 org.cinnamon.theme name 'Windows-10'
 org.cinnamon.theme symbolic-relative-size 0.67000000000000004
-org.cinnamon.theme theme-cache-updated 1615898659
+org.cinnamon.theme theme-cache-updated 1616405418
 org.cinnamon.desktop.notifications display-notifications true
 org.cinnamon.desktop.notifications bottom-notifications false
 org.cinnamon.desktop.notifications fade-on-mouseover true
@@ -522,7 +521,7 @@ org.cinnamon.settings-daemon.plugins.power button-power 'suspend'
 org.cinnamon.settings-daemon.plugins.power sleep-display-battery 1800
 org.cinnamon.settings-daemon.plugins.power idle-brightness 30
 org.cinnamon.settings-daemon.plugins.power idle-dim-battery true
-org.cinnamon.settings-daemon.plugins.power critical-battery-action 'hibernate'
+org.cinnamon.settings-daemon.plugins.power critical-battery-action 'shutdown'
 org.cinnamon.settings-daemon.plugins.power inhibit-lid-switch true
 org.cinnamon.settings-daemon.plugins.power button-suspend 'suspend'
 org.cinnamon.settings-daemon.plugins.power percentage-critical 3
@@ -558,7 +557,7 @@ org.cinnamon.keyboard keyboard-type 'tablet'
 org.cinnamon.desktop.default-applications.terminal exec-arg '-x'
 org.cinnamon.desktop.default-applications.terminal exec 'gnome-terminal'
 org.cinnamon favorite-apps ['firefox.desktop', 'cinnamon-settings.desktop', 'pidgin.desktop', 'org.gnome.Terminal.desktop', 'nemo.desktop']
-org.cinnamon hotcorner-layout ['expo:false:0', 'scale:false:0', 'scale:false:0', 'desktop:false:0']
+org.cinnamon hotcorner-layout ['expo:true:0', 'scale:false:0', 'scale:false:0', 'desktop:false:0']
 org.cinnamon extension-cache-updated 0
 org.cinnamon looking-glass-history @as []
 org.cinnamon desktop-effects-tile-effect 'none'
@@ -569,12 +568,12 @@ org.cinnamon desktop-effects-minimize-time 160
 org.cinnamon show-media-keys-osd 'medium'
 org.cinnamon workspace-expo-view-as-grid false
 org.cinnamon desktop-effects-unmaximize-time 100
-org.cinnamon applet-cache-updated 1615815369
+org.cinnamon applet-cache-updated 1616506357
 org.cinnamon active-display-scale 1
 org.cinnamon panel-launchers ['DEPRECATED']
 org.cinnamon enable-app-monitoring true
 org.cinnamon panel-zone-text-sizes '[{"panelId": 1, "left": 0.0, "center": 0.0, "right": 0.0}]'
-org.cinnamon panel-zone-symbolic-icon-sizes '[{"panelId": 1, "left": 39, "center": 28, "right": 16}]'
+org.cinnamon panel-zone-symbolic-icon-sizes '[{"panelId": 1, "left": 50, "center": 28, "right": 16}]'
 org.cinnamon panels-enabled ['1:0:bottom']
 org.cinnamon run-dialog-aliases @as []
 org.cinnamon alttab-switcher-delay 100
@@ -599,7 +598,7 @@ org.cinnamon desktop-effects-minimize-effect 'traditional'
 org.cinnamon desktop-effects true
 org.cinnamon show-snap-osd true
 org.cinnamon desktop-effects-maximize-transition 'easeInExpo'
-org.cinnamon enabled-applets ['panel1:left:1:menu@cinnamon.org:0', 'panel1:left:3:grouped-window-list@cinnamon.org:2', 'panel1:right:4:systray@cinnamon.org:3', 'panel1:right:5:xapp-status@cinnamon.org:4', 'panel1:right:6:notifications@cinnamon.org:5', 'panel1:right:7:printers@cinnamon.org:6', 'panel1:right:8:removable-drives@cinnamon.org:7', 'panel1:right:9:keyboard@cinnamon.org:8', 'panel1:right:10:network@cinnamon.org:9', 'panel1:right:11:sound@cinnamon.org:10', 'panel1:right:12:power@cinnamon.org:11', 'panel1:right:14:clean-show-desktop@filipetorresbr:19', 'panel1:right:13:calendar@cinnamon.org:12']
+org.cinnamon enabled-applets ['panel1:left:0:menu@cinnamon.org:0', 'panel1:left:2:grouped-window-list@cinnamon.org:2', 'panel1:right:7:systray@cinnamon.org:3', 'panel1:right:8:xapp-status@cinnamon.org:4', 'panel1:right:9:notifications@cinnamon.org:5', 'panel1:right:10:printers@cinnamon.org:6', 'panel1:right:11:removable-drives@cinnamon.org:7', 'panel1:right:12:keyboard@cinnamon.org:8', 'panel1:right:13:network@cinnamon.org:9', 'panel1:right:14:sound@cinnamon.org:10', 'panel1:right:15:power@cinnamon.org:11', 'panel1:right:16:calendar@cinnamon.org:12', 'panel1:right:17:clean-show-desktop@filipetorresbr:25']
 org.cinnamon desktop-effects-close-transition 'easeOutQuad'
 org.cinnamon alttab-switcher-style 'coverflow'
 org.cinnamon desktop-effects-minimize-transition 'easeInQuad'
@@ -621,7 +620,7 @@ org.cinnamon alttab-minimized-aware false
 org.cinnamon cinnamon-settings-advanced false
 org.cinnamon panels-show-delay ['1:0']
 org.cinnamon workspace-osd-visible true
-org.cinnamon desklet-cache-updated 0
+org.cinnamon desklet-cache-updated 1616569502
 org.cinnamon app-menu-icon-name 'cinnamon-symbolic'
 org.cinnamon desklet-snap-interval 25
 org.cinnamon desktop-effects-style 'cinnamon'
@@ -630,14 +629,14 @@ org.cinnamon enabled-extensions @as []
 org.cinnamon enabled-desklets @as []
 org.cinnamon enabled-search-providers @as []
 org.cinnamon bring-windows-to-current-workspace true
-org.cinnamon next-applet-id 22
+org.cinnamon next-applet-id 28
 org.cinnamon desktop-effects-unmaximize-effect 'none'
 org.cinnamon alttab-switcher-enforce-primary-monitor false
 org.cinnamon panel-zone-icon-sizes '[{"panelId": 1, "left": 24, "center": 0, "right": 24}]'
 org.cinnamon panel-edit-mode false
 org.cinnamon desktop-effects-close-time 120
 org.cinnamon workspace-osd-y 50
-org.cinnamon next-desklet-id 0
+org.cinnamon next-desklet-id 2
 org.cinnamon desktop-effects-close-effect 'traditional'
 org.cinnamon desktop-effects-map-transition 'easeOutQuad'
 org.cinnamon workspace-name-overrides ['DEPRECATED']
@@ -669,7 +668,7 @@ org.cinnamon.desktop.a11y.magnifier cross-hairs-length 4096
 org.cinnamon.desktop.a11y.magnifier screen-position 'full-screen'
 org.cinnamon.desktop.a11y.magnifier cross-hairs-thickness 8
 org.cinnamon.desktop.a11y.magnifier lens-shape 'square'
-org.cinnamon.desktop.default-applications.office.tasks exec 'evolution -c tasks'
+org.cinnamon.desktop.default-applications.office.tasks exec 'evolution\n-c\ntasks'
 org.cinnamon.desktop.default-applications.office.tasks needs-term false
 org.cinnamon.SessionManager quit-time-delay 60
 org.cinnamon.SessionManager x-sync false

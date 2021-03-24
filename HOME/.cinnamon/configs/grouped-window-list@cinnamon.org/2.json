@@ -178,7 +178,7 @@
         "type": "checkbox",
         "default": false,
         "description": "Show windows from all workspaces",
-        "value": false
+        "value": true
     },
     "enable-app-button-dragging": {
         "type": "checkbox",
@@ -195,7 +195,7 @@
             "Fade": 2,
             "Scale": 3
         },
-        "value": 3
+        "value": 2
     },
     "cycleMenusHotkey": {
         "type": "keybinding",
@@ -295,7 +295,7 @@
         "type": "checkbox",
         "default": false,
         "description": "Show autostart option",
-        "value": false
+        "value": true
     },
     "launch-new-instance-menu-item": {
         "type": "checkbox",
@@ -351,7 +351,7 @@
         "step": 1,
         "units": "percent",
         "description": "Window opacity",
-        "value": 100
+        "value": 50.0
     },
     "__md5__": "c17a25f344a109cb1388da44a67375e8"
 }

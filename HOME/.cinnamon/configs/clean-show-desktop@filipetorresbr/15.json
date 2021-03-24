@@ -1,0 +1,98 @@
+{
+    "head": {
+        "type": "header",
+        "description": "Settings"
+    },
+    "peek-at-desktop": {
+        "type": "switch",
+        "default": true,
+        "description": "Peek at the desktop on hover",
+        "tooltip": "Peek at the desktop when hovering the applet",
+        "value": true
+    },
+    "peek-blur": {
+        "type": "switch",
+        "default": true,
+        "dependency": "peek-at-desktop",
+        "indent": true,
+        "description": "Blur effect",
+        "tooltip": "Blur windows when peeking at the desktop",
+        "value": false
+    },
+    "peek-delay": {
+        "type": "spinbutton",
+        "default": 400,
+        "min": 0,
+        "max": 1000,
+        "step": 50,
+        "units": "milliseconds",
+        "dependency": "peek-at-desktop",
+        "indent": true,
+        "description": "Hover delay",
+        "tooltip": "Delay before Peek shows desktop",
+        "value": 400
+    },
+    "peek-opacity": {
+        "type": "scale",
+        "default": 10,
+        "min": 0,
+        "max": 255,
+        "step": 10,
+        "dependency": "peek-at-desktop",
+        "indent": true,
+        "description": "Window opacity",
+        "tooltip": "Change the opacity of windows when peeking at the desktop",
+        "value": 15.0
+    },
+    "width": {
+        "type": "scale",
+        "default": 1,
+        "min": 1,
+        "max": 10,
+        "step": 1,
+        "units": "pixels",
+        "description": "Applet size",
+        "tooltip": "Adjust this to increase or decrease the width of this applet",
+        "value": 3.0
+    },
+    "background": {
+        "type": "colorchooser",
+        "default": "rgba(000,000,000,0)",
+        "description": "Fill color",
+        "tooltip": "Select a fill color",
+        "value": "rgba(0,0,0,0)"
+    },
+    "border": {
+        "type": "colorchooser",
+        "default": "rgb(255,255,255)",
+        "description": "Border color",
+        "tooltip": "Select a border color",
+        "value": "rgb(46,52,54)"
+    },
+    "on-hover-background": {
+        "type": "colorchooser",
+        "default": "rgb(255,255,255)",
+        "description": "Fill color on mouse hover",
+        "tooltip": "Change the fill color when mouse hover",
+        "value": "rgb(255,255,255)"
+    },
+    "on-hover-border": {
+        "type": "colorchooser",
+        "default": "rgb(255,255,255)",
+        "description": "Border color on mouse hover",
+        "tooltip": "Change the Border color when mouse hover",
+        "value": "rgb(255,255,255)"
+    },
+    "border-width": {
+        "type": "scale",
+        "default": 1,
+        "min": 0,
+        "max": 5,
+        "step": 1,
+        "units": "pixels",
+        "description": "Border width",
+        "tooltip": "Select the border width",
+        "value": 1.0
+    },
+    "__md5__": "ac8264d3b91069c93d4407e9ac337283"
+}
